@@ -13,7 +13,14 @@
                    use: [{
                        loader: "html-loader"
                    }]
-               }
+               },
+               {
+                test: /\.css$/,
+                use: [
+                  'style-loader',
+                  'css-loader'
+                ]
+              }
            ]
        },
        plugins: [
@@ -21,5 +28,6 @@
                template: "./src/index.html",
                filename: "./index.html"
            })
+           
        ]
    };

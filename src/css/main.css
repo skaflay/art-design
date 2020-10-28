@@ -1,0 +1,39 @@
+body {
+    overflow: hidden;
+    margin: 0px;
+}
+
+div#home-page {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(128deg, rgba(255, 255, 255, 1) 56.95%, rgba(20, 75, 209, 1) 57%);
+    min-height: 100vh;
+    opacity: 1;
+}
+
+div#navbar {
+
+    background-color: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0.1px 3px 0 rgba(54, 54, 54, 0.19);
+}
+
+nav#main-nav {
+    min-height: 5px;
+    justify-content: center !important;
+    padding: 8px;
+    display: flex;
+
+}
+
+ul#navbar-list {
+    align-content: center;
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+ul#navbar-list li {
+    font-family: Source-sans-pro;
+    display: inline;
+    padding: 15px;
+
+}

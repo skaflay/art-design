@@ -1,40 +1,25 @@
 import ReactDOM from "react-dom";
 import React, { Component } from 'react' 
 
-class Form extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      value: ""
-    };
+const navbar = React.createElement(
+  'nav', {
+      id: 'main-nav',
+      className: 'navbar'
+  },
+  listElement()
+)
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    const { value } = event.target;
-    this.setState(() => {
-      return {
-        value
-      };
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </form>
-    );
-  }
+function listElement() {
+  return (
+<ul id="navbar-list">
+  <li>Home</li>
+  <li>Plane Models</li>
+  <li>Contact Us</li>
+  <li>Help</li>
+  <li>Liability Information</li>
+</ul>
+  )
 }
-
-export default Form;
-
-const wrapper = document.getElementById("container");
-wrapper ? ReactDOM.render(<Form />, wrapper) : false;
+ReactDOM.render(navbar,
+  document.getElementById('navbar'));
