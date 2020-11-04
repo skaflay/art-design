@@ -1,27 +1,25 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(26, 24, 24);
+}
+html{
+    width: 100%;
 }
 
 div#home-page {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(128deg, rgba(255, 255, 255, 1) 56.95%, rgba(20, 75, 209, 1) 57%);
-    min-height: 100vh;
-    opacity: 1;
-}
-
-div#navbar {
-
-    background-color: transparent;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0.1px 3px 0 rgba(54, 54, 54, 0.19);
+    height: 100%;
+    width: fit-content;
 }
 
 nav#main-nav {
+    background-color: transparent;
     min-height: 5px;
     justify-content: center !important;
-    padding: 8px;
+    padding: 2%;
     display: flex;
-
 }
 
 ul#navbar-list {
@@ -35,5 +33,53 @@ ul#navbar-list li {
     font-family: Source-sans-pro;
     display: inline;
     padding: 15px;
+    color: #ffff;
 
+}
+
+
+.main-content {
+    display: flex;
+}
+
+.main-content .header-text {
+    flex: 1;
+}
+
+h1.main-header {
+    padding-left: 150px;
+    font-style: italic;
+    line-height: 0;
+    color: #ffff;
+    font-size: 9rem;
+}
+h4.mid-header {
+    padding-top: 100px;
+    padding-left: 150px;
+    font-weight: 200;
+    color: white;
+    font-size: 3rem;
+}
+.main-content .hero-image{
+    margin: 20px;
+}
+
+#clouds {
+    object-fit: cover;
+    height: 100vh;
+    width: auto;
+    background-image: url('../assets/clouds.png');
+    animation: animate 120s linear infinite;
+}
+
+
+
+@keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
 }
