@@ -35,16 +35,7 @@ class MainContainer extends React.Component{
 
 
 
-class HomeComponent extends React.Component{
-render(){
-  return(
-    <div>
-   
-    <Navbar /> 
-    <MainContainer />
-    </div>
-  )
-}}
+
 class AnimatedPlane extends React.Component{
   render(){
     return (
@@ -56,6 +47,7 @@ class AnimatedPlane extends React.Component{
 }
 
 
-
-ReactDOM.render(<HomeComponent/>,
+ReactDOM.render(<Navbar />,
+  document.getElementById('navbar'));
+ReactDOM.render(<MainContainer/>,
   document.getElementById('home-page'));
