@@ -50,8 +50,8 @@ class ScrollContent extends React.Component {
       <div className="container scroll-content">
         <div className="scroll-text-card">
           <div className="scroll-text">
-            <h1 className="scroll-Text">Available Plane Modules we<br/>
-              <span className="scroll-text-minor">
+            <h1 className="scroll-text scroll">Available Plane Modules we<br/>
+              <span className="scroll-text-minor scroll">
                 can help you with!
               </span>
             </h1>

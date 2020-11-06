@@ -109,6 +109,7 @@ h4.mid-header {
     margin: 0;
     left: 0;
     width: 45%;
+    z-index:1;
     height: 37rem;
 }
 
@@ -165,6 +166,7 @@ h4.mid-header {
 .scroll-content .scroll-box {
     height: 37rem;
     border-radius: 0px;
+    z-index: inherit;
     box-shadow: rgba(0, 0, 0, 0.7);
 }
 
