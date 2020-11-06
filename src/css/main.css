@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+
 body {
     overflow-x: hidden;
     margin: 0px;
     height: 100%;
     width: 100%;
-    background-color: #214356;
 }
-html{
+
+html {
     width: 100%;
 }
 
+.container {
+    min-width: 1337px;
+}
 
 div#home-page {
     height: 100%;
     width: fit-content;
+}
+
+#hero-page {
+    margin: 0;
+    background-color: #0C1524;
 }
 
 nav#main-nav {
@@ -38,12 +49,13 @@ ul#navbar-list li {
 
 }
 
-.main-content{
+.main-content {
     display: flex;
 }
-.main-content .header-text{
-position: absolute;
-flex:1;
+
+.main-content .header-text {
+    position: absolute;
+    flex: 1;
 }
 
 
@@ -55,6 +67,7 @@ h1.main-header {
     color: #ffff;
     font-size: 9rem;
 }
+
 h4.mid-header {
     padding-top: 100px;
     padding-left: 150px;
@@ -82,4 +95,85 @@ h4.mid-header {
     to {
         background-position: 100% 0;
     }
+}
+
+.scroll-content {
+    background-color: white;
+    background-repeat: no-repeat;
+    height: 37rem;
+}
+
+.scroll-content .scroll-text-card {
+    float: left;
+    background-color: black;
+    margin: 0;
+    left: 0;
+    width: 45%;
+    height: 37rem;
+}
+
+.scroll-content .scroll-text {
+    color: white;
+    padding: 50px 50px;
+    margin-top: 40px;
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.scroll-content .scroll-text-minor {
+    font-size: 3rem;
+    font-family: sans;
+    color: white;
+}
+ .module-card-left {
+     float:left;
+     margin-top:50px;
+    min-height: 2rem;
+    height: 5rem;
+    background-color:#f5be3f;
+    width: 30rem;
+}
+ .module-card-right{
+    margin-top:55px;
+    float:right;
+    right:0;
+    min-height: 2rem;
+    height: 5rem;
+    background-color:#2fb9f0;
+    width: 30rem;
+        
+}
+.module-card-left-2 {
+    float:left;
+    margin-top:65px;
+   min-height: 2rem;
+   height: 5rem;
+   background-color:#cf412e;
+   width: 30rem;
+}
+.module-card-right-2{
+   margin-top: 70px;
+   float:right;
+   right:0;
+   min-height: 2rem;
+   height: 5rem;
+   background-color:#19bb6a;
+   width: 30rem;
+}
+
+
+.scroll-content .scroll-box {
+    height: 37rem;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.7);
+}
+
+.card__name {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
 }

@@ -5,7 +5,7 @@ gsap.registerPlugin(MotionPathPlugin);
 var t1=new TimelineLite();
 t1.add(
 gsap.to(".hero-plane", {
-    duration: 3, 
+    duration: 2, 
     repeat: 0,
     yoyo: false,
     ease: "power1.inOut",
