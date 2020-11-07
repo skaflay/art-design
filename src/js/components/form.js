@@ -55,13 +55,13 @@ class ScrollContent extends React.Component {
                 can help you with!
               </span>
             </h1>
-          
+
           </div>
         </div>
         <div className="scroll-box">
           <div className="card">
-          <CardModule />
-  
+            <CardModule/>
+
           </div>
         </div>
       </div>
@@ -69,22 +69,42 @@ class ScrollContent extends React.Component {
   }
 }
 
+function MidText(props) {
+  return (
+    <div className="mid-text-section">
 
+      <h2 className="main-section-text mid-text">{props.header}<br/></h2>
+      <span className="main-quote">{props.mainquote1}</span><br/>
+      <span className="main-quote ">{props.mainquote2}</span>
+      <br/>
+      <span className="blockquote">({props.blockquote})</span>
 
-
-function  MidText(props){
-    return(
-      <div className="mid-text-section">
-          
-            <h2 className="main-section-text mid-text">{props.header}<br /></h2>
-            <span className="main-quote">{props.mainquote1}</span><br/>
-            <span className="main-quote ">{props.mainquote2}</span>
-            <br/><span className="blockquote">({props.blockquote})</span>
-    
-        </div>
-    )
+    </div>
+  )
 }
 
+function ScrollImage(props) {
+  return (
+    <div className="image-section">
+      <div id="del1" className="delayed-section" data-scrub="0.4">
+        <div className="innerContainer">
+          <img src={props.img1} alt=""></img>
+        </div>
+      </div>
+      <div id="del2" className="delayed-section" data-scrub="0.2">
+        <div className="innerContainer">
+          <img  src={props.img2} alt=""></img>
+        </div>
+      </div>
+      <div id="del3" className="delayed-section" data-scrub="0.6">
+        <div className="innerContainer">
+          <img src={props.img3} alt=""></img>
+        </div>
+      </div>
+    </div>
+
+  )
+}
 
 ReactDOM.render(
   <Navbar/>, document.getElementById('navbar'));
@@ -92,11 +112,14 @@ ReactDOM.render(
   <MainContainer/>, document.getElementById('hero-content'));
 ReactDOM.render(
   <ScrollContent/>, document.getElementById('scroll-content'));
-
-  ReactDOM.render(
-    <MidText 
-    header="Start by knowing the structure of an aircraft operates.After all, "
-    mainquote1="Learn the rules like a pro,"
-    mainquote2="before you fly like an artist"
-    blockquote="or something along the same lines!" />, document.getElementById("text-element")
-  )
+ReactDOM.render(
+  <MidText
+  header="Start by knowing the structure of an aircraft operates.After all, "
+  mainquote1="Learn the rules like a pro,"
+  mainquote2="before you fly like an artist"
+  blockquote="or something along the same lines!"/>, document.getElementById('text-element'));
+ReactDOM.render(
+  <ScrollImage
+  img1="./src/assets/plane1.jpg"
+  img2="./src/assets/plane2.jpg"
+  img3="./src/assets/plane3.jpg" />, document.getElementById('scroll-images'));
