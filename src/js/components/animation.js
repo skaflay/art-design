@@ -95,7 +95,7 @@ t3.from(".main-section-text", {
 
 delSections.forEach(section => {
   const containerAnim = gsap.to(section.querySelector(".innerContainer"), {
-    y: "100vh",
+    y: "30vh",
     ease: "none"
   });
   
