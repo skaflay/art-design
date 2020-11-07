@@ -69,9 +69,34 @@ class ScrollContent extends React.Component {
   }
 }
 
+
+
+
+function  MidText(props){
+    return(
+      <div className="mid-text-section">
+          
+            <h2 className="main-section-text mid-text">{props.header}<br /></h2>
+            <span className="main-quote">{props.mainquote1}</span><br/>
+            <span className="main-quote ">{props.mainquote2}</span>
+            <br/><span className="blockquote">({props.blockquote})</span>
+    
+        </div>
+    )
+}
+
+
 ReactDOM.render(
   <Navbar/>, document.getElementById('navbar'));
 ReactDOM.render(
   <MainContainer/>, document.getElementById('hero-content'));
 ReactDOM.render(
   <ScrollContent/>, document.getElementById('scroll-content'));
+
+  ReactDOM.render(
+    <MidText 
+    header="Start by knowing the structure of an aircraft operates.After all, "
+    mainquote1="Learn the rules like a pro,"
+    mainquote2="before you fly like an artist"
+    blockquote="or something along the same lines!" />, document.getElementById("text-element")
+  )
