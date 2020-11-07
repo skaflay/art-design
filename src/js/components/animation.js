@@ -2,11 +2,13 @@ import gsap from "gsap";
 import {
   TweenMax,
   TweenLite,
+  TimelineMax,
   TimelineLite,
   Power1
 } from "gsap/gsap-core.js";
 import MotionPathPlugin from "gsap/src/MotionPathPlugin.js";
 import ScrollTrigger from "gsap/src/ScrollTrigger.js";
+import {$} from  "jquery";
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 var t1 = new TimelineLite();
@@ -71,7 +73,7 @@ t2.from(".scroll", {
 
 let t3 = gsap.timeline({
   scrollTrigger: {
-    trigger: "main-section-text"
+    trigger: ".main-section-text"
   }
 });
 t3.from(".main-section-text", {
@@ -95,12 +97,12 @@ t3.from(".main-section-text", {
 
 delSections.forEach(section => {
   const containerAnim = gsap.to(section.querySelector(".innerContainer"), {
-    y: "30vh",
+    y: "50vh",
     ease: "none"
   });
   
   const imageAnim = gsap.to(section.querySelector("img"), {
-    y: "-100vh",
+    y: "-80vh",
     ease: "none",
     paused: true
   });
@@ -125,3 +127,18 @@ delSections.forEach(section => {
     }
   });
 });
+var plane = document.querySelector('.flying-plane')
+var height=plane.height;
+console.log(height);
+
+gsap.to(plane, {
+  duration: 5,
+  repeat: -1,
+  yoyo: false,
+  ease: "power1.inOut",
+  motionPath: {
+    path: "M -3 300 Q 700 420 1350 420",
+    autoRotate: false,
+  
+  },
+})
