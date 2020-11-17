@@ -1,17 +1,34 @@
 import ReactDOM, {render} from "react-dom";
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 class Navbar extends React.Component {
   render() {
     return (
-      <nav id="main-nav" className="navbar">
+      <Router>
+        <nav id="main-nav" className="navbar">
         <ul id="navbar-list">
-          <li>Home</li>
-          <li>Plane Models</li>
-          <li>Contact Us</li>
-          <li>Help</li>
+          <li>
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to ="/models">
+            Plane Models
+              </Link>
+              </li>
+         <li>
+         <Link to="/contact">
+           Contact Us
+            </Link>
+           </li>
+          <li>
+            <Link to="/help">
+              Help</Link></li>
         </ul>
       </nav>
+      </Router>
     )
   }
 }
@@ -19,15 +36,18 @@ class Navbar extends React.Component {
 class MainContainer extends React.Component {
   render() {
     return (
-      <div className="main-content container">
-        <div className="header-text">
-          <h4 className="mid-header">How to Fly</h4>
-          <h1 className="main-header">A Plane</h1>
+
+        <div className="main-content container" id="clouds">
+          <Navbar />
+          <div className="header-text">
+            <h4 className="mid-header">How to Fly</h4>
+            <h1 className="main-header">A Plane</h1>
+          </div>
+          <div className="hero-image">
+            <img src="./src/assets/plane.png" className="hero-plane"></img>
+          </div>
         </div>
-        <div className="hero-image">
-          <img src="./src/assets/plane.png" className="hero-plane"></img>
-        </div>
-      </div>
+  
     )
   }
 }
@@ -97,7 +117,7 @@ function ScrollImage(props) {
             <img src={props.img2} alt=""></img>
           </div>
         </div>
-        <div id="del3" className="delayed-section" >
+        <div id="del3" className="delayed-section">
           <div className="innerContainer">
             <img src={props.img3} alt=""></img>
           </div>
@@ -107,22 +127,21 @@ function ScrollImage(props) {
 
   )
 }
-class Footer extends React.Component{
-  render(){
-    return(
-    <div className="container">
-      <div className="footer-text">
-        <div className="copyright">
-<h5 >Developed by : Kaflay Sabi</h5>
-        </div>
-        <div className="resources">
-          <h5>Resources Utillized: UnSplash Images 
-                                   FreePik Images 
-                                   GSAP Development Documentation 
-          </h5>
+class Footer extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <div className="footer-text">
+          <div className="copyright">
+            <h5 >Developed by : Kaflay Sabi</h5>
+          </div>
+          <div className="resources">
+            <h5>Resources Utillized: UnSplash Images FreePik Images GSAP Development
+              Documentation
+            </h5>
+          </div>
         </div>
       </div>
-    </div>
     )
   }
 }
@@ -141,32 +160,35 @@ function FinalSection() {
             <h5>the weight</h5>
           </div>
         </div>
-        <img className="flying-plane" src="./src/assets/flyingplane.png" ></img>
+        <img className="flying-plane" src="./src/assets/flyingplane.png"></img>
         <div className="planeHanger">
-          <Footer />
+          <Footer/>
         </div>
       </div>
     </div>
   )
 }
 
-ReactDOM.render(
-  <Navbar/>, document.getElementById('navbar'));
-ReactDOM.render(
-  <MainContainer/>, document.getElementById('hero-content'));
-ReactDOM.render(
-  <ScrollContent/>, document.getElementById('scroll-content'));
-ReactDOM.render(
+function Homepage(){
+  return(
+    <div className="container">
+  <MainContainer />
+  <ScrollContent />
   <MidText
   header="Start by knowing the structure of an aircraft operates.After all, "
   mainquote1="Learn the rules like a pro,"
   mainquote2="before you fly like an artist"
-  blockquote="or something along the same lines!"/>, document.getElementById('text-element'));
-ReactDOM.render(
+  blockquote="or something along the same lines!"/>
   <ScrollImage
   img1="./src/assets/plane1.jpg"
   img2="./src/assets/plane2.jpg"
-  img3="./src/assets/plane3.jpg"/>, document.getElementById('scroll-images'));
-ReactDOM.render(
-  <FinalSection/>, document.getElementById("final-section"));
+  img3="./src/assets/plane3.jpg"/>
+  <FinalSection />
+  </div>
+  )
+}
 
+
+
+ReactDOM.render(
+  <Homepage />,document.getElementById('hero-page'));

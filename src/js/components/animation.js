@@ -8,7 +8,7 @@ import {
 } from "gsap/gsap-core.js";
 import MotionPathPlugin from "gsap/src/MotionPathPlugin.js";
 import ScrollTrigger from "gsap/src/ScrollTrigger.js";
-import {$} from  "jquery";
+
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 var t1 = new TimelineLite();
@@ -19,7 +19,7 @@ t1.add(
     yoyo: false,
     ease: "power1.inOut",
     motionPath: {
-      path: "M50,300 C250,200 400,200 520,100 ",
+      path: "M50,300 C250,200 400,200 560,200 ",
       autoRotate: false,
       alignOrigin: [0, 0]
     },

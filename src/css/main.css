@@ -12,8 +12,8 @@ html {
     width: 100%;
 }
 
-.container {
-    min-width: 1337px;
+a{
+    text-decoration: none;
 }
 
 div#home-page {
@@ -27,17 +27,15 @@ div#home-page {
 }
 
 nav#main-nav {
+    width: 100%;
+  text-align: center;
     min-height: 5px;
-    justify-content: center !important;
-    align-content: center;
     padding: 2%;
-    display: flex;
+  position: absolute;
 }
 
 ul#navbar-list {
-    align-content: center;
     display: inline-block;
-    position: relative;
     list-style: none;
 }
 
@@ -48,7 +46,9 @@ ul#navbar-list li {
     color: #ffff;
 
 }
-
+ul#navbar-list li a{
+    color:white;
+}
 .main-content {
     display: flex;
 }
@@ -78,7 +78,6 @@ h4.mid-header {
 
 
 #clouds {
-    object-fit: cover;
     min-height: 100vh;
     width: 100%;
     background-image: url('../assets/clouds.png');
@@ -174,6 +173,7 @@ h4.mid-header {
     margin-top: 15px;
     font-size: 1.5em;
 }
+
 
 .card-image img {
     width: 100%;
